@@ -5,12 +5,53 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- NO OLVIDES LOS METADATOS -->
+    <!-- COMMON TAGS -->
+<meta charset="utf-8">
+<title>Companion la mecanica rota</title>
+<!-- Search Engine -->
+<meta name="description" content="Página en donde se describe por qué companion es una mecánica demasiado poderosa para Magic the Gathering ">
+<meta name="image" content="https://images1.mtggoldfish.com/featured_images/5622/Companions__1_.jpg">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="Companion la mecanica rota">
+<meta itemprop="description" content="Página en donde se describe por qué companion es una mecánica demasiado poderosa para Magic the Gathering ">
+<meta itemprop="image" content="https://images1.mtggoldfish.com/featured_images/5622/Companions__1_.jpg">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Companion la mecanica rota">
+<meta name="twitter:description" content="Página en donde se describe por qué companion es una mecánica demasiado poderosa para Magic the Gathering ">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:title" content="Companion la mecanica rota">
+<meta name="og:description" content="Página en donde se describe por qué companion es una mecánica demasiado poderosa para Magic the Gathering ">
+<meta name="og:image" content="https://images1.mtggoldfish.com/featured_images/5622/Companions__1_.jpg">
+<meta name="og:type" content="website">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Companions</title>
 </head>
 
 <body class="bg-light">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Magic Articles</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Sobre magic<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page-1.html">Metagames</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="page-2.html" tabindex="-1" aria-disabled="true">Precios</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
     <div class="container py-3">
         <div class="row">
             <header class="col-12 mb-3">
@@ -40,16 +81,16 @@
         var texto = ["Ha afecta todos los formatos competitivos", "Otorgan ventaja de carta no interactuable a un jugador", "Hacen consistentes cualquier estrategia que los incluya", "Rompen reglas fundamentales de mano inicial", "Las estrategias se están adaptando a los companions y no al revés", "Probablemente sea la mecánica más baneada por carta"];
         // Referencias para lo que sigue https://api.jquery.com/jquery.each/ ({ https://api.jquery.com/append/ })
         $.each( texto, function( i, frase ) {
-            $("#articulos").append("<div class='col-lg-6 col-xl-4 mb-4'><article class='bg-primary text-light p-3 shadow-sm rounded'>"+frase+"</article></div>");
+            $("#articulos").append("<div class='col-sm-6 col-lg-4 col-xl-3 mb-4'><article class='bg-danger text-light p-3 shadow rounded'>"+frase+"</article></div>");
         });
         // Lo que sigue aprovecha Bootstrap y jQuery. Afecta a la proporción del video embebido, quitando/poniendo una clase
         $(window).bind("load resize",function() {
             var w = $(window).width();
             console.log(w);
             if (w <= 992) {
-                $( "div.embed-responsive" ).removeClass( "embed-responsive-21by9" ).addClass( "embed-responsive-4by3" );
+                $( "div.embed-responsive" ).removeClass( "embed-responsive-21by9" ).addClass( "embed-responsive-1by1" );
             } else {
-                $( "div.embed-responsive" ).removeClass( "embed-responsive-4by3" ).addClass( "embed-responsive-21by9" );
+                $( "div.embed-responsive" ).removeClass( "embed-responsive-1by1" ).addClass( "embed-responsive-21by9" );
             }
         });
     </script>
